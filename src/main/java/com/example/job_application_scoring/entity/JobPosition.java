@@ -17,7 +17,7 @@ public class JobPosition {
     private String title;
     @ElementCollection
     @Enumerated(EnumType.STRING)
-    private Set<SkillName> requiredSkills; //enum mu yapmalıyım ayrı bir class mı?
+    private Set<SkillName> requiredSkills; //enum mu yapmalıyım ayrı bir obje mi?
     @ElementCollection
     @Enumerated(EnumType.STRING)
     private Set<SkillName> niceToHaveSkills;
