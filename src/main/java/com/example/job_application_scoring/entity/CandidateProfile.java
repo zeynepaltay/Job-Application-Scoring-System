@@ -3,10 +3,15 @@ package com.example.job_application_scoring.entity;
 import com.example.job_application_scoring.enums.EducationLevel;
 import com.example.job_application_scoring.enums.SkillName;
 import jakarta.persistence.*;
+import lombok.AccessLevel;
+import lombok.NoArgsConstructor;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Set;
 
 @Entity
+@NoArgsConstructor(access = AccessLevel.PROTECTED)//neden??
 public class CandidateProfile {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -21,4 +26,6 @@ public class CandidateProfile {
     @ElementCollection//bak bi emin değilim
     @Column(name = "certificates")
     private Set<String> certificates;
+    @OneToMany(mappedBy = "candidate")
+    private List<JobApplication> application= new ArrayList<>();
 }
