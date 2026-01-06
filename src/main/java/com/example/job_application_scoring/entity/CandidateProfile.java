@@ -16,7 +16,7 @@ public class CandidateProfile {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @Column(name = "years_of_experinece")
+    @Column(name = "years_of_experience")
     private Integer yearsOfExperience;
     @ElementCollection
     @Enumerated(EnumType.STRING)
@@ -24,8 +24,7 @@ public class CandidateProfile {
     @Enumerated(EnumType.STRING)
     private EducationLevel educationLevel;
     @ElementCollection//bak bi emin değilim
-    @Column(name = "certificates")
     private Set<String> certificates;
     @OneToMany(mappedBy = "candidate")
-    private List<JobApplication> application= new ArrayList<>();
+    private List<JobApplication> applications = new ArrayList<>();
 }
