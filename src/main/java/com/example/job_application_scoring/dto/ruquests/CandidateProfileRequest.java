@@ -3,7 +3,6 @@ package com.example.job_application_scoring.dto.ruquests;
 import com.example.job_application_scoring.enums.EducationLevel;
 import com.example.job_application_scoring.enums.SkillName;
 import jakarta.validation.constraints.Min;
-import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;
 
@@ -14,7 +13,7 @@ public class CandidateProfileRequest {
     private Integer yearsOfExperience;
     @NotEmpty(message = "Skills cannot be empty")
     private Set<SkillName> skills;
-    @NotBlank(message = "Can't pass without choosing an education level")
+    @NotNull(message = "Education level is required")
     private EducationLevel educationLevel;
     private Set<String> certificates;
 }
