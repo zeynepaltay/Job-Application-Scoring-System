@@ -3,15 +3,18 @@ package com.example.job_application_scoring.entity;
 import com.example.job_application_scoring.enums.EducationLevel;
 import com.example.job_application_scoring.enums.SkillName;
 import jakarta.persistence.*;
-import lombok.AccessLevel;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 
 @Entity
+@Getter
+@Setter
+@Builder
 @NoArgsConstructor(access = AccessLevel.PROTECTED)//neden??
+@AllArgsConstructor
 public class CandidateProfile {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
