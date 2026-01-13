@@ -5,8 +5,11 @@ import com.example.job_application_scoring.enums.SkillName;
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;
+import lombok.Getter;
 
 import java.util.Set;
+
+@Getter
 public class CandidateProfileRequest {
     @NotNull(message = "Experience year is required")
     @Min(value = 0, message = "Experience year cannot be negative")
