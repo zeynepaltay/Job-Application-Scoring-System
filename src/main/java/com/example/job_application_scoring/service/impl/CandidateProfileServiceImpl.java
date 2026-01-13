@@ -38,4 +38,13 @@ public class CandidateProfileServiceImpl implements CandidateProfileService {
 
         return candidateProfileMapper.toResponse(profile);
     }
+
+    @Transactional
+    @Override
+    public void deleteProfile(Long id){
+        CandidateProfile profile = candidateProfileRepository.findById(id)
+                .orElseThrow(() -> new EntityNotFoundException("Profile not found"));
+
+        candidateProfileRepository.delete(profile);
+    }
 }
