@@ -5,9 +5,10 @@ import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;
+import lombok.Getter;
 
 import java.util.Set;
-
+@Getter
 public class JobPositionRequest {
     @NotBlank(message = "Title is required")
     private String title;
