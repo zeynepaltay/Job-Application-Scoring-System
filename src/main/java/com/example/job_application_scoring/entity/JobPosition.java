@@ -4,10 +4,14 @@ import com.example.job_application_scoring.enums.SkillName;
 import com.example.job_application_scoring.valueobject.WeightConfig;
 import jakarta.persistence.*;
 import lombok.AccessLevel;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import java.util.Set;
 
+@Getter
+@Setter
 @Entity
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 public class JobPosition {
